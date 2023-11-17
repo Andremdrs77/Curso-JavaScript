@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: rgb(49, 23, 195);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+        var n1 = window.prompt('Digite um número') // String
+        var n2 = window.prompt('Digite outro número') // String
+        n1 = Number(n1) // String --> Inteiro
+        n2 = Number(n2) // String --> Inteiro
+
+        // "var n1 = Number(window.prompt('Digite um número'))" também seria uma solução correta
+        
+        // para converter para string, posso usar n1 = String(n1)
+
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${n1 + n2}`) // Usando crases ao invés de aspas e cifrão, posso formatar o texto usando as variáveis.
+
+        //variavel.length retorna o tamanho da variável
+        //variavel.toUpperCase() deixa a string com letras maiúsculas
+        //variavel.tolowerCase() deixa a string com letras minúsculas
+    </script>
+</body>
+</html>
