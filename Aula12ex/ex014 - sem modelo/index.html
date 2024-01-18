@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            font: normal 15pt Arial;
+        }
+
+        div.container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 100%;
+        }
+
+        div.card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 35%;
+            height: 56%;
+            background-color: white;
+            border-radius: 20px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Hora do Dia</h1>
+        <div class="card">
+            <p id="mostrarHora"></p>
+            <img src="imagemdohorario" id="imagemhora">
+            &copy; CursoemVideo
+        </div>
+    </div>
+
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var minuto = agora.getMinutes()
+        var mostrarHora = document.querySelector('#mostrarHora')
+        var titulo = document.querySelector('#title')
+
+        mostrarHora.innerHTML = `Agora são ${hora}:${minuto}`
+
+        var container = document.querySelector('.container')
+        var imagem = document.querySelector('#imagemhora')
+
+
+        if (hora < 12) {
+            container.style.backgroundColor = '#ffe9a6'
+            imagem.src = 'dia.jpg'
+            titulo.style.color = 'black'
+        } else if (hora < 18) {
+            container.style.backgroundColor = '#FD6051'
+            imagem.src = 'tarde.jpg'
+            titulo.style.color = 'white'
+        } else {
+            container.style.backgroundColor = '#1d1936'
+            imagem.src = 'noite.jpg'
+            titulo.style.color = 'white'
+        }
+        
+    </script>
+</body>
+</html>
