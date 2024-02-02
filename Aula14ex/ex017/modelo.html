@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Número: <input type="number" name="txtnumero" id="txtnumero">
+            </p>
+            <p>
+                <input type="button" value="Gerar Tabuada" onclick="gerarTabuada()">
+            </p>
+        </div>
+        <div id="res">
+            <select name="tabuada" id="seltab" size="10">
+                <option>Por favor, digite um número!</option>
+            </select> <!--select traz opções com opções. 'size' é 10 pois a tabuada mostra 10 resultados. -->
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
